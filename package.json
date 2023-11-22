@@ -2,7 +2,7 @@
   "name": "vite-reactts-eslint-prettier",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite --port=3000",
+    "dev": "vite --port=3007",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint-check": "eslint ./src --ext .js,.ts,.tsx,.jsx",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20.4.8",
     "@types/react": "^18.2.19",
     "@types/react-dom": "^18.2.7",
@@ -20,6 +21,7 @@
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "formik": "^2.4.3",
+    "lodash.debounce": "^4.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.1.2",

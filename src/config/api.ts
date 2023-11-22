@@ -4,3 +4,5 @@ export const DEFAULT_HEADERS = {
 };
 
 export const BASE_URL = 'https://swapi.dev/api/';
+
+export const DEFAULT_PAGE_ELEMENT_COUNT = 10;

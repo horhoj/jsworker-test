@@ -1,0 +1,34 @@
+.PeopleItemCard {
+  max-width: 200px;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #D4DEFE;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  display: grid;
+  background-color: #fff;
+  overflow: hidden;
+
+
+  &:hover {
+    border: 2px solid #D4DEFE;
+  }
+}
+
+.title {
+  font-size: 22px;
+}
+
+.field {
+  overflow: hidden;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fieldCaption {
+  font-weight: bold;
+}
