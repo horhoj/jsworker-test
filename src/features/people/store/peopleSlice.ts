@@ -90,3 +90,7 @@ export const peopleSlice = {
 export const peopleIsLoadingSelector = (state: RootState) =>
   state.people.fetchListOfPeopleRequest.isLoading ||
   state.people.fetchPeopleItemRequest.isLoading;
+
+export const peopleErrorSelector = (state: RootState) =>
+  state.people.fetchListOfPeopleRequest.error !== null ||
+  state.people.fetchPeopleItemRequest.error !== null;

@@ -1,6 +1,5 @@
 import { RouteItem } from './types';
 import { Page404 } from '~/app/pages/Error404Page';
-import { AboutPage } from '~/features/about/pages/AboutPage';
 import { ListOfPeoplePage } from '~/features/people/pages/ListOfPeoplePage';
 import { PeopleItemPage } from '~/features/people/pages/PeopleItemPage';
 import { getUUID } from '~/utils/getUUID';
@@ -13,14 +12,6 @@ export const routeList = [
     name: 'listOfPeople',
     path: '/list-of-people',
     title: 'List of people',
-  },
-  {
-    id: getUUID(),
-    component: AboutPage,
-    inMenu: true,
-    name: 'about',
-    path: '/about',
-    title: 'About',
   },
   {
     id: getUUID(),

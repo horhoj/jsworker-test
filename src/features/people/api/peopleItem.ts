@@ -17,7 +17,7 @@ const fetchPeopleItem = async (id: string) => {
 
   // eslint-disable-next-line require-atomic-updates
   localCache[id] = res.data;
-  console.log('peopleItemCache', localCache);
+  // console.log('peopleItemCache', localCache);
 
   return res.data;
 };

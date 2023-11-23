@@ -28,7 +28,7 @@ services:
     build:
       context: docker/nginx
     ports:
-      - "80:87"
+      - "8087:80"
     volumes:
       - ./:/var/www/
 #    networks:

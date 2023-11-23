@@ -39,7 +39,7 @@ const fetchListOfPeople = async (page?: number, search?: string) => {
 
   // eslint-disable-next-line require-atomic-updates
   localCache[currentHash] = data;
-  console.log('peopleCache', localCache);
+  // console.log('peopleCache', localCache);
 
   return data;
 };
