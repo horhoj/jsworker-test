@@ -11,10 +11,11 @@
   display: grid;
   background-color: #fff;
   overflow: hidden;
+  transition: transform 300ms;
 
 
   &:hover {
-    border: 2px solid #D4DEFE;
+    transform: scale(1.1);
   }
 }
 
