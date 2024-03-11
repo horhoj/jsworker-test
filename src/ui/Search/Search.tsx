@@ -1,8 +1,8 @@
-import debounce from 'lodash/debounce';
 import React, { useEffect, useRef } from 'react';
 import styles from './Search.module.scss';
 import { DEFAULT_DEBOUNCE_TIMEOUT } from '~/config/app';
 import { MagnifyingGlassIcon } from '~/assets/icons';
+import { debounce } from '~/utils/debounce';
 
 interface SearchProps {
   onSearch: (value: string) => void;
