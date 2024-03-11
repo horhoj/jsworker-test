@@ -3,6 +3,7 @@ import {
   ListOfPeopleItem,
   ListOfPeopleItemWithoutId,
 } from '../types/ListOfPeopleItem';
+import { memoize } from '~/utils/memoize';
 import { axiosInstance } from '~/api/apiTransport';
 
 const dataMapper = (
@@ -16,18 +17,7 @@ const dataMapper = (
   return { ...data, results };
 };
 
-//Сделал локальный кэш, чисто из-за тормознутого АПИ
-//Так как база только для чтения то в инвалидации кэша смысла нет
-const getHash = (page?: number, search?: string) => `${search}_${page}`;
-const localCache: Record<string, ListResponse<ListOfPeopleItemWithoutId>> = {};
-
-const fetchListOfPeople = async (page?: number, search?: string) => {
-  const currentHash = getHash(page, search);
-
-  if (localCache[currentHash]) {
-    return localCache[currentHash];
-  }
-
+const fetchListOfPeople = memoize(async (page?: number, search?: string) => {
   const res = await axiosInstance.request<
     ListResponse<ListOfPeopleItemWithoutId>
   >({
@@ -37,11 +27,7 @@ const fetchListOfPeople = async (page?: number, search?: string) => {
 
   const data = dataMapper(res.data);
 
-  // eslint-disable-next-line require-atomic-updates
-  localCache[currentHash] = data;
-  // console.log('peopleCache', localCache);
-
   return data;
-};
+});
 
 export const peopleAPI = { fetchListOfPeople } as const;
