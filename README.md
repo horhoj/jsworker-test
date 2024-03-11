@@ -1,5 +1,9 @@
 # тестовое для компании jsworker.
 
+# демо
+
+https://jsworker-test.vercel.app/list-of-people?page=1
+
 # Используется: 
 
 vite, react, typescript, redux-tookit, docker(docker-compose), nginx (для раздачи статики билда), eslint + prettier
